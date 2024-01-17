@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de javascript</title>
+</head>
+<body>
+    <script>
+        var nj1 = prompt('Numero do jogador 1');
+
+        nj1 = parseInt(nj1)
+
+        var nj2 = prompt('Numero do jogador 2')
+
+        nj2 = parseInt(nj2)
+
+        if (nj1 == nj2) { alert('vocês empataram')
+          }
+
+          else {
+            var nsor = parseInt(Math.random() * 2)
+
+            if (nsor === 0) {
+
+                if (nj1 < nj2) {
+                    alert('ganhou o jogador 1')
+                } else {
+                    alert('ganhou o jogador 2')
+                }
+                
+            } else {
+                if (nj1 > nj2) {
+                    alert('ganhou o jogador 1')
+                }
+                else {
+                    alert('ganhou o jogador 2')
+                }
+            }
+          }
+    </script>
+</body>
+</html>
