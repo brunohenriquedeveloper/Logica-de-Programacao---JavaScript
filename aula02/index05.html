@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando expressões booleanas</title>
+</head>
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <script>
+       var num1 = prompt('digite um número');
+
+       num1 = parseFloat(num1);
+
+       var num2 = prompt('digite mais um número');
+
+       num2 = parseFloat(num2);
+
+       var media = (num1 + num2)/2;
+
+       alert(media > 5);
+
+
+       if(media > 5 && num1 > 0 && num2 > 0) {
+        alert('aprovado')
+        //bloco verdade 
+       } else {
+        alert('reprovado')
+        //bloco mentira
+       }
+
+
+    </script>
+</body>
+</html>

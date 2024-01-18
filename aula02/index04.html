@@ -20,22 +20,12 @@
 
           else {
             var nsor = parseInt(Math.random() * 2)
+            alert('nsorteado: ' + nsor)
 
-            if (nsor === 0) {
-
-                if (nj1 < nj2) {
-                    alert('ganhou o jogador 1')
-                } else {
-                    alert('ganhou o jogador 2')
-                }
-                
+            if(nsor === 0 && nj1 < nj2 || nsor === 1 && nj1>nj2) {
+                alert('ganhou o jogador 1')
             } else {
-                if (nj1 > nj2) {
-                    alert('ganhou o jogador 1')
-                }
-                else {
-                    alert('ganhou o jogador 2')
-                }
+                alert('ganhou o jogador 2')
             }
           }
     </script>
