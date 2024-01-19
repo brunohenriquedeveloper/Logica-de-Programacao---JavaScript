@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógiva de Programação com Javascript</title>
+</head>
+<body>
+    
+    <script>
+      var num1 = prompt('digite um número')
+
+      num1 = parseFloat(num1)
+
+      var indice = 1
+
+
+      while(indice <=1000) {
+        document.write(`${num1} x ${indice} = ` + num1 * indice + '<br>')
+
+        indice = indice + 1
+      }
+
+      document.write('Saiu do loop')
+
+    </script>
+</body>
+</html>
