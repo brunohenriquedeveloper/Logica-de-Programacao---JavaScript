@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+    <button onclick="mostrarTabuada()">Criar tabuada</button>
+    <button onclick="limparTabuada()">Limpar tabuada</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        function mostrarTabuada(){
+           var num1 = prompt('digite um número')
+
+           limparTabuada()
+
+           num1 = parseFloat(num1)
+
+           var i = 1
+
+           while( i <= 1000){
+            mensagem += `${num1} x ${i} = ` + num1*i + '<br>'
+            i++
+           }
+
+           output.innerHTML = mensagem
+        }
+
+        function limparTabuada(){
+            mensagem = ''
+            output.innerHTML = mensagem
+        }
+
+       
+        var output = document.querySelector('#output')
+     
+        var mensagem = ''
+    
+        output.innerHTML = mensagem
+
+    </script>
+</body>
+</html>
