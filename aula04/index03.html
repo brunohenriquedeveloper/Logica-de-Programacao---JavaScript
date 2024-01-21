@@ -6,10 +6,10 @@
     <title>Calculadora</title>
 </head>
 
- <button onclick="somar()">+</button>
-<button onclick="sub()">-</button>
-<button onclick="mul()">x</button>
-<button onclick="div()">/</button>
+ <button onclick="cal('+')">+</button>
+<button onclick="cal('-')">-</button>
+<button onclick="cal('*')">x</button>
+<button onclick="cal('/')">/</button>
 
 <div id="output"></div>
 
@@ -26,48 +26,28 @@
             output.innerHTML = num1
         }
 
-        function somar(){
-            var num2 = prompt('digite mais um número')
+        function cal(simbolo){
 
-            num2 = parseFloat(num2)
+            var n = prompt('digite outro número')
+            n = parseFloat(n)
 
-            num1 = num1 + num2
+            switch(simbolo){
+                case '+': num1+= n
+                break
 
-            escreve()
+                case'-': num1-= n
+                break
+
+                case '*': num1 *= n
+                break
+
+                case '/': num1 /= n
+                break
+            }
+              escreve()
         }
 
-        
-        function sub(){
-            var num2 = prompt('digite mais um número')
-
-            num2 = parseFloat(num2)
-
-            num1 = num1 - num2
-
-            escreve()
-        }
-
-        
-        function mul(){
-            var num2 = prompt('digite mais um número')
-
-            num2 = parseFloat(num2)
-
-            num1 = num1 * num2
-
-            escreve()
-        }
-
-        
-        function div(){
-            var num2 = prompt('digite mais um número')
-
-            num2 = parseFloat(num2)
-
-            num1 = num1 / num2
-
-            escreve()
-        }
+    
 
     </script>
 </body>
