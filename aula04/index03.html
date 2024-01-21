@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+ <button onclick="somar()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">x</button>
+<button onclick="div()">/</button>
+
+<div id="output"></div>
+
+<body>
+    <script>
+        var num1 = prompt('digite um número')
+
+        num1 = parseFloat(num1)
+
+        escreve()
+
+        function escreve(){
+            var output = document.querySelector('#output')
+            output.innerHTML = num1
+        }
+
+        function somar(){
+            var num2 = prompt('digite mais um número')
+
+            num2 = parseFloat(num2)
+
+            num1 = num1 + num2
+
+            escreve()
+        }
+
+        
+        function sub(){
+            var num2 = prompt('digite mais um número')
+
+            num2 = parseFloat(num2)
+
+            num1 = num1 - num2
+
+            escreve()
+        }
+
+        
+        function mul(){
+            var num2 = prompt('digite mais um número')
+
+            num2 = parseFloat(num2)
+
+            num1 = num1 * num2
+
+            escreve()
+        }
+
+        
+        function div(){
+            var num2 = prompt('digite mais um número')
+
+            num2 = parseFloat(num2)
+
+            num1 = num1 / num2
+
+            escreve()
+        }
+
+    </script>
+</body>
+</html>
