@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+
+<button onclick="iniciarCalculo('+')">+</button>
+<button onclick="iniciarCalculo('-')">-</button>
+<button onclick="iniciarCalculo('*')">x</button>
+<button onclick="iniciarCalculo('/')">/</button>
+
+<div id="output"></div>
+
+<script>
+    var num1;
+
+    window.onload = function () {
+        num1 = prompt('Digite um número');
+        num1 = parseFloat(num1);
+        escreve();
+    };
+
+    function escreve(resultado) {
+        var output = document.querySelector('#output');
+        if (resultado !== undefined) {
+            output.innerHTML = resultado;
+        } else {
+            output.innerHTML = num1;
+        }
+    }
+
+    function iniciarCalculo(simbolo) {
+        var num2 = prompt('Digite mais um número');
+        num2 = parseFloat(num2);
+        var msg = cal(simbolo, num1, num2);
+        escreve(msg);
+
+        try{
+            var msg = cal(simbolo, num1, num2)
+        } catch(e) {
+            alert(e)
+            return
+        }
+    }
+
+    function cal(simbolo, num1, num2) {
+    
+        if( isNaN(num1) && isNaN(num2)) {
+            throw new Error ('passando somente números')
+        }
+        var numeroCalculado = null;
+
+        switch (simbolo) {
+            case '+':
+                numeroCalculado = num1 + num2;
+                break;
+
+            case '-':
+                numeroCalculado = num1 - num2;
+                break;
+
+            case '*':
+                numeroCalculado = num1 * num2;
+                break;
+
+            case '/':
+                numeroCalculado = num1 / num2;
+                break;
+        }
+
+        return numeroCalculado;
+    }
+</script>
+
+</body>
+</html>
