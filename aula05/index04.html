@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica com js</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var produtos = new Array('caneta', 'caderno', 'livros')
+        var output = document.querySelector('#output')
+
+        produtos.push('lapis', 'cartolina')
+
+            var msg = ''
+            for(var i = 0; i < produtos.length; i++){
+                msg += 'produto ' + (i + 1) + ': ' + produtos[i] + '<br>'
+            }
+        output.innerHTML = msg
+    </script>
+</body>
+</html>
