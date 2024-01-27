@@ -6,15 +6,23 @@
     <title>Lógica de Programação</title>
 </head>
 <body>
+    <div id="output"></div>
     
     <script>
 
-        var arr = new Array(caneta, lapis, caderno)
-    
-        var caneta = new Object
-        caneta.nome = bic
-        caneta.preco = 2
+       var produto1 = new Object()
 
+       produto1.nome = 'caneta'
+       produto1.preco = 2
+       produto1.estoque = 10
+
+       var msg = ''
+
+       msg += 'nome: ' + produto1.nome + '<br>'
+       msg += 'preço: ' + produto1.preco + '<br>'
+       msg += 'estoque: ' + produto1.estoque + '<br>'
+
+       document.querySelector('#output').innerHTML = msg
     </script>
 </body>
 </html>
