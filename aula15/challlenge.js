@@ -27,7 +27,7 @@ console.log (name2 + ": " + bmi2)
 if(parseFloat(bmi1) > parseFloat(bmi2)) {
     console.log(`${bmi1} > ${bmi2}`)
     console.log(true)
-} else if (parseFloat(bmi1) = parseFloat(bmi2)) {   console.log(`${bmi1} = ${bmi2}`)
+} else if (parseFloat(bmi1) === parseFloat(bmi2)) {   console.log(`${bmi1} = ${bmi2}`)
     console.log("its the same BMI")
 } else {
     console.log(`${bmi1} < ${bmi2}`)
