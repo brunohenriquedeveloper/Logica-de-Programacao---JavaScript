@@ -1,4 +1,4 @@
-let bill = 60
+const bill = 60
 let tip = 0
 
 bill >= 50 && bill <= 300 ? tip = (bill * 0.15) : tip = (bill * 0.20 )
