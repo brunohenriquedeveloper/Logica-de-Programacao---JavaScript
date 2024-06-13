@@ -1,14 +1,25 @@
 'strict mode';
 let numbers = [12, 13, 17, 7, 89, 119, 65];
 
-function fat (){
-    let n1 = 2 ;
+let np = []; // não primos
+let p = []; // primos
 
-    for(i=0; i <= n1; i++){
-    if(numbers[i] % n1=== 0){
+function isPrime(n){
+    if(n <= 1) return false;
+    if(n > 3) return true;
+    if(n % 2 === 0 || n % 3 === 0) return false;
+    for(let i = 5; i * i <= n; i += 6){
+        if(n % i === 0 || n % (i + 2) === 0) return false;
+    }
 
-       
-    } else{
-    n1++
 }
-} }
+
+function classifyNumbers(numbers){
+    numbers.forEach(number => {
+        if(isPrime(number)){
+            p.push(number);
+        } else {
+            np.push(number);
+        }
+    });
+}
