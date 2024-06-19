@@ -96,4 +96,10 @@ let allplayers = ['Burki',
     'Thiago',
     ]
 
-    
+    const game = {
+        odds: {
+            borussia: 3.25,
+            draw: 2.05,
+            bayern: 1.21,
+        },
+    }
